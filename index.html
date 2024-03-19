@@ -1,0 +1,58 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Shathuly</title>
+    <link rel="icon" type="image/x-icon" href="images/logo.jpeg">
+    <!--font awsome css file-->
+    <link rel="stylesheet" href="css/all.min.css" />
+    <!--normlize css file-->
+    <link rel="stylesheet" href="css/normlize.css" />
+    <!--Main css file-->
+    <link rel="stylesheet" href="css/shathuly.css" />
+    <!--Font open sans file-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="content">
+            <img src="images/back1.png" />
+            <audio id="myAudio" controls autoplay>
+                <source src="" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+
+            <script>window.onload = function () {
+                    const audioFiles = [
+                        'music/1.mp3',
+                        'music/2.mp3',
+                        'music/3.mp3',
+                        'music/4.mp3',
+                        // Add more audio files as needed
+                    ];
+
+                    const audioElement = document.getElementById('myAudio');
+                    let currentTrackIndex = 0;
+
+                    // Function to play the next audio track
+                    function playNextTrack() {
+                        currentTrackIndex = (currentTrackIndex + 1) % audioFiles.length; // Increment index circularly
+                        const nextAudioFile = audioFiles[currentTrackIndex];
+                        audioElement.src = nextAudioFile;
+                        audioElement.play();
+                    }
+
+                    audioElement.addEventListener('ended', playNextTrack);
+
+                    // Initial play of the first track
+                    audioElement.src = audioFiles[currentTrackIndex];
+                    audioElement.play();
+                };</script>
+        </div>
+
+    </div>
+  
+</body>
+</html >
