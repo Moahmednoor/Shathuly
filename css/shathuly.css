@@ -49,29 +49,41 @@ ul {
     padding-right: 15px;
     margin-left: auto;
     margin-right: auto;
+    
 }
 
     .landing{
     min-height: 100vh;
-    background-color: #1f2021;
-    background-image: url("../images/back1.png");
+    background-color: black;
+/*    background-image: url("../images/back1.png");*/
     background-size: cover;
     position: relative;
     }
-@media (min-width: 1200px) {
+        .landing h1 {
+            color: white;
+            margin-left: calc(50% - 75px);
+            margin-right: calc(50% - 75px);
+            padding-top: 20%;
+            font-size: 150px;
+            margin-top: 0px;
+            margin-bottom: 0px;
+        }
 
-    .landing {
-        min-height: 100vh;
-        background-color: #1f2021;
-        background-image: url("../images/back2.png");
-        background-size: cover;
-        position: relative;
+        .landing  .one{
+            width: 800px;
+            height: 750px;
+            margin-left: calc(50% - 400px);
+            margin-right: calc(50% - 400px);
+        }
+/* Large */
+@media (min-width: 1200px) {
+    .landing .one {
+        width: 800px;
+        height: 750px;
+        margin-left: calc(50% - 400px);
+        margin-right: calc(50% - 400px);
     }
 }
-    .container .content  img{
-     width: 100%;
-
-    }
 
     .container .content audio{
         position: absolute;
